@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: daddyjokes-depl
+  labels:
+    app.kubernetes.io/name: daddyjokes-depl
+    app.kubernetes.io/part-of: daddyjokes-depl-project
+    kubernetes.azure.com/generator: devhub
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: daddyjokes-depl

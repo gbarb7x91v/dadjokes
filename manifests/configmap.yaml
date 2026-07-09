@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: daddyjokes-depl-config
+  namespace: daddyjokes-ns
+  labels:
+    app.kubernetes.io/name: daddyjokes-depl
+    kubernetes.azure.com/generator: devhub
+data:
